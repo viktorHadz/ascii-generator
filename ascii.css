@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #181818;
+  font-family: system-ui, sans-serif;
+  color: #eee;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Wider container */
+.container {
+  background: #202020;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 95vw; /* almost full width */
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Canvas takes full width but is capped by height */
+#canvas1 {
+  border: 2px solid #666;
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  background: #111;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+}
+
+.control-group label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+input[type='range'] {
+  width: 220px;
+  cursor: pointer;
+}
+
+input[type='file'] {
+  cursor: pointer;
+  color: #ccc;
+}
+
+button {
+  background: #2e86de;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1e6fc1;
+}
+button:active {
+  background: #155497;
+}
+
+/* Textarea takes full width */
+#asciiOutput {
+  width: 100%;
+  background: #111;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: monospace;
+  white-space: pre;
+  line-height: 1;
+  resize: vertical;
+}
+.canvas-area {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.preview,
+.ascii {
+  flex: 1 1 400px; /* grow, shrink, min width */
+  text-align: center;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 70vh;
+  border: 2px solid #666;
+  border-radius: 6px;
+  background: #111;
+  display: block;
+  margin: 0 auto;
+}
+
+.ascii canvas {
+  max-width: 100%;
+  max-height: 70vh;
+  border: 2px solid #666;
+  background: #111;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+.preview #previewWrapper {
+  max-width: 100%;
+  max-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #666;
+  border-radius: 6px;
+  background: #111;
+  padding: 20px;
+}
+
+#previewPlaceholder {
+  color: #888;
+  font-size: 1rem;
+}
+
+#previewImg {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 6px;
+  display: block;
+}

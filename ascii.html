@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="ascii.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">ASCII Art Generator</h1>
+
+      <div class="canvas-area">
+        <!-- Original preview -->
+        <div class="preview">
+          <h2>Original</h2>
+          <div id="previewWrapper">
+            <span id="previewPlaceholder">No image uploaded yet</span>
+            <img id="previewImg" alt="Original preview" style="display: none" />
+          </div>
+        </div>
+
+        <!-- ASCII canvas -->
+        <div class="ascii">
+          <h2>ASCII</h2>
+          <canvas id="canvas1"></canvas>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="resolution" id="resolutionLabel">Resolution 10px</label>
+          <input
+            type="range"
+            name="resolution"
+            id="resolution"
+            min="1"
+            max="20"
+            value="10"
+          />
+        </div>
+
+        <div class="control-group">
+          <label for="upload">Upload Image</label>
+          <input type="file" id="upload" accept="image/*" />
+        </div>
+
+        <button id="textBtn" type="button">Export to Text</button>
+      </div>
+
+      <textarea
+        id="asciiOutput"
+        rows="20"
+        cols="80"
+        placeholder="Click ‘Export to Text’ to dump ASCII here…"
+      ></textarea>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
